@@ -1,0 +1,23 @@
+body{
+    min-height: 100vh !important;
+    background-color: rgb(137, 166, 227) !important;
+} 
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    padding-top: 12px;
+}
+
+.card {
+    width: 30rem;
+}
