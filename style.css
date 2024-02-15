@@ -1,10 +1,10 @@
-body{
+body {
     min-height: 100vh !important;
     background-color: rgb(137, 166, 227) !important;
-} 
+}
 
 .container {
-    height: 100vh;
+    height: 94vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,4 +20,31 @@ body{
 
 .card {
     width: 30rem;
+}
+
+.quiz-answer:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.bg-success,
+.bg-danger {
+    color: white !important;
+}
+
+.d-none {
+    display: none;
+}
+
+.tropy-little {
+    width: 50px;
+    object-fit: cover;
+}
+
+.card-end-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
 }
