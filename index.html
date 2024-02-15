@@ -24,11 +24,17 @@
     <div class="container">
         <div class="card">
             <img src="./img/rocket.png" class="card-img-top height">
+            <div class="progress no-radius" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div id ="progress-bar" class="progress-bar" style="width: 0%">25%</div>
+              </div>
             <div class="card-body d-none card-end-screen" id="card-end-screen">
                 <h1>Quiz beendet</h1>
                 <img class="tropy-little" src="./img/trophy.png" alt="">
                 <div>Du hast <b id="right-answers">0</b> Fragen von <b id="all-question-number">7</b> richtig
-                    beantwortet</div>
+                    beantwortet
+                    </div>
+                    <button onclick="javascript:location.reload()" id="restart-game-button" class="btn btn-primary">Nochmal Spielen
+                    </button>
             </div>
             <div id="card-screen" class="card-body row p-4">
                 <h5 id="question-text" class="card-title p-1">Frage</h5>

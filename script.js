@@ -61,15 +61,20 @@ let questions = [
 
 let rightQuestions = 0;
 let currentQuestion = 0;
+let audioSucces = new Audio('mp3/success.mp3');
+let audiofailure = new Audio('mp3/false.mp3');
 
 function init() {
     document.getElementById("all-questions").innerHTML = questions.length;
     showQuestion();
-
 }
 
 function showQuestion() {
     let question = questions[currentQuestion];
+    let percent = currentQuestion / questions.length;
+    percent = Math.round(percent * 100);
+    document.getElementById('progress-bar').innerHTML = `${percent}%`;
+    document.getElementById('progress-bar').style = `width: ${percent}%;`
     if (currentQuestion >= questions.length) {
         document.getElementById('card-end-screen').classList.remove('d-none');
         document.getElementById('card-screen').classList.add('d-none');
@@ -90,12 +95,13 @@ function answer(selection) {
     let selectedquestionnumber = selection.slice(-1);
     let idOfRightAnswer = `answer_${question["right_answer"]}`;
     if (selectedquestionnumber == question["right_answer"]) {
-        console.log("Richtige Antwort");
         document.getElementById(selection).parentNode.classList.add('bg-success');
         rightQuestions++;
+        audioSucces.play();
     } else {
         document.getElementById(selection).parentNode.classList.add('bg-danger');
         document.getElementById(idOfRightAnswer).parentNode.classList.add('bg-success');
+        audiofailure.play();
     }
     document.getElementById('next-button').disabled = false;
 }

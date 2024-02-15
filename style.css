@@ -48,3 +48,7 @@ body {
     justify-content: center;
     gap: 24px;
 }
+
+.no-radius {
+    border-radius: 0 !important;
+}
